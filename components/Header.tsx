@@ -1,8 +1,9 @@
-import Link from "next/link";
+"use client";
 import Image from "next/image";
 import whatsapp from "../public/images/whatsapp.png";
 import arrow from "../public/images/arrow.png";
-import logo from "../public/images/logo.png"
+import logo from "../public/images/logo.png";
+import { useQuoteForm } from "./QuoteFormCOntext";
 const navLinks = [
   { label: "Uniforms", href: "#range" },
   { label: "Institutions", href: "#customisation" },
@@ -11,11 +12,13 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const { open } = useQuoteForm();
+
   return (
     <header className="sticky top-0 z-40 border-b border-navy-100 bg-white/95 backdrop-blur">
       <div className="container-x flex h-16 items-center justify-between gap-6">
         <div className="flex items-center justify-center gap-10">
-        <Image src={logo} alt="logo" height={150} width={150}/>
+          <Image src={logo} alt="logo" height={150} width={150} />
 
           <nav className="hidden items-center gap-8 text-sm font-semibold text-navy-700 font-sans md:flex">
             {navLinks.map((link) => (
@@ -32,6 +35,7 @@ export default function Header() {
 
         <div className="flex items-center gap-3">
           <button
+            onClick={open}
             type="button"
             className="hidden items-center gap-2 rounded-md bg-gold-500 px-4 py-2 text-lg text-navy-900 hover:bg-gold-400 font-heading sm:inline-flex"
           >
@@ -39,13 +43,14 @@ export default function Header() {
             <Image src={arrow} height={20} width={20} alt="arrow" />
           </button>
 
-          <button
+          <a
+            href="https://api.whatsapp.com/send/?phone=918884755555&text=Hi%2C+Thank+you+for+your+interest+in+GradeUp+Uniforms.+Please+let+us+know+how+we+can+help+you%3F+Our+reponses+may+be+delayed%2C+but+we+will+respond+to+you+at+the+earliest.+Thank+you+for+your+patience&type=phone_number&app_absent=0"
             type="button"
             className="hidden items-center gap-2 px-4 py-2 text-base font-bold text-navy-900 sm:inline-flex"
           >
             <Image src={whatsapp} height={24} width={24} alt="whatsapp" />
             WhatsApp Us
-          </button>
+          </a>
         </div>
       </div>
     </header>

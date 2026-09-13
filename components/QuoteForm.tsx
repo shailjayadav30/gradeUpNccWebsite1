@@ -143,7 +143,7 @@ export default function QuoteForm() {
           </button>
 
           <a
-            href="https://wa.me/918847555555"
+            href="https://api.whatsapp.com/send/?phone=918884755555&text=Hi%2C+Thank+you+for+your+interest+in+GradeUp+Uniforms.+Please+let+us+know+how+we+can+help+you%3F+Our+reponses+may+be+delayed%2C+but+we+will+respond+to+you+at+the+earliest.+Thank+you+for+your+patience&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 text-sm font-semibold text-green-700 hover:underline"

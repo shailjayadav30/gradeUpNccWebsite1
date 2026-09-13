@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import whatsapp from "../public/images/whatsapp.png";
 import nccCadet from "../public/images/NCC Website/Group of ncc cadets.png";
@@ -63,13 +63,10 @@ const features = [
   },
 ];
 
-
-
 export default function Hero() {
-    const { open } = useQuoteForm();
+  const { open } = useQuoteForm();
   return (
     <section className="relative overflow-hidden bg-white min-h-[calc(100vh-4rem)] flex items-center">
-     
       <div className="absolute inset-0 z-0">
         <Image
           src={nccCadet}
@@ -81,7 +78,6 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-transparent md:w-3/5" />
       </div>
 
-   
       <p className="absolute top-6 right-4 md:right-10 hidden md:block max-w-[170px] text-right font-hand text-2xl leading-tight text-navy-800 z-20">
         Discipline
         <br />
@@ -135,17 +131,16 @@ export default function Hero() {
             <button onClick={open} className="btn-gold">
               Get NCC Bulk Pricing →
             </button>
-            <button
-              rel="noopener noreferrer"
+            <a
+              href="https://api.whatsapp.com/send/?phone=918884755555&text=Hi%2C+Thank+you+for+your+interest+in+GradeUp+Uniforms.+Please+let+us+know+how+we+can+help+you%3F+Our+reponses+may+be+delayed%2C+but+we+will+respond+to+you+at+the+earliest.+Thank+you+for+your+patience&type=phone_number&app_absent=0"
               className="btn-outline text-navy-600 font-sans font-semibold flex items-center gap-2"
             >
               <Image src={whatsapp} height={24} width={24} alt="whatsapp" />
               Talk to Us on WhatsApp
-            </button>
+            </a>
           </div>
         </div>
 
-        
         <div className="hidden md:block" />
       </div>
     </section>

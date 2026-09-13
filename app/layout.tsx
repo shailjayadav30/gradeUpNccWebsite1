@@ -35,7 +35,7 @@ export default function RootLayout({
       className={`${anton.variable} ${montserrat.variable} ${caveat.variable}  h-full antialiased`}
     >
       <body className="font-sans bg-white">
-        <Header />
+        {/* <Header /> */}
         {children}
       </body>
     </html>

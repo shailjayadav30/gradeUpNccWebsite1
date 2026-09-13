@@ -64,7 +64,7 @@ export default function ProductRange() {
         </div>
 
         {/* top pagination */}
-        <div className="flex items-center gap-3 text-sm font-medium text-navy-700">
+        {/* <div className="flex items-center gap-3 text-sm font-medium text-navy-700">
           <button
             aria-label="Previous"
             onClick={() => setPage((p) => Math.max(0, p - 1))}
@@ -82,24 +82,24 @@ export default function ProductRange() {
           >
             ›
           </button>
-        </div>
+        </div> */}
       </div>
 
 
-      <button
+      {/* <button
         aria-label="Previous"
         onClick={() => setPage((p) => Math.max(0, p - 1))}
         className="hidden md:grid absolute left-[-18px] top-1/2 -translate-y-1/2 h-9 w-9 place-items-center rounded-full border border-navy-200 bg-white text-navy-600 shadow-sm hover:bg-navy-50 z-10"
       >
         ‹
-      </button>
-      <button
+      </button> */}
+      {/* <button
         aria-label="Next"
         onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
         className="hidden md:grid absolute right-[-18px] top-1/2 -translate-y-1/2 h-9 w-9 place-items-center rounded-full border border-navy-200 bg-white text-navy-600 shadow-sm hover:bg-navy-50 z-10"
       >
         ›
-      </button>
+      </button> */}
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
         {products.map((p) => (
