@@ -5,6 +5,7 @@ import { createContext, useContext, useState, type ReactNode } from "react";
 const QuoteFormContext = createContext<
   | {
       isOpen: boolean;
+      openSignal: number;
       open: () => void;
       close: () => void;
     }
@@ -13,12 +14,16 @@ const QuoteFormContext = createContext<
 
 export function QuoteFormProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [openSignal, setOpenSignal] = useState(0);
 
   return (
     <QuoteFormContext.Provider
       value={{
         isOpen,
-        open: () => setIsOpen(true),
+        openSignal,
+        open: () => {
+          (setIsOpen(true), setOpenSignal((n) => n + 1));
+        },
         close: () => setIsOpen(false),
       }}
     >

@@ -6,12 +6,7 @@ export default function Footer() {
   return (
     <footer id="footer" className="border-t border-navy-100 bg-[#fffdfb] py-8">
       <div className="container-x flex flex-col md:flex-row items-center justify-between">
-        {/* logo */}
-        <div className="shrink-0">
-          <Image src={logo} alt="GradeUp.Shop" height={30} width={150} className="w-auto" />
-        </div>
-
-        {/* address */}
+   
         <div className="flex items-center gap-2 max-w-[220px]">
           <Image src={location} alt="location" height={20} width={20} className="mt-0.5 shrink-0" />
           <p className="text-sm text-navy-600 font-semibold leading-snug">
@@ -20,7 +15,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* phone */}
+        
         <a href="tel:+918847555555" className="flex items-center gap-2 text-sm font-semibold text-navy-600 hover:underline shrink-0">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5 shrink-0">
             <path d="M4 5c0-.6.4-1 1-1h3.2c.5 0 .9.3 1 .8l1 3.6c.1.4 0 .8-.3 1.1L7.8 10.6a13 13 0 006.6 6.6l1.1-2.1c.3-.3.7-.4 1.1-.3l3.6 1c.5.1.8.5.8 1V20c0 .6-.4 1-1 1h-1C10.5 21 3 13.5 3 4V3" />

@@ -5,10 +5,17 @@ import ProductRange from "./ProductRange";
 import DetailsMatter from "./DetailsMatter";
 import ComfortPerformance from "./ComfortPerformance";
 import QuoteForm from "./QuoteForm";
+import { useEffect, useRef } from "react";
 
 export default function NccShowcase() {
-  const { isOpen } = useQuoteForm();
+  const { isOpen, openSignal } = useQuoteForm();
+  const formRef = useRef<HTMLDivElement | null>(null);
 
+  useEffect(() => {
+    if (isOpen && formRef.current) {
+      formRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [openSignal]);
   return (
     <div id="range" className="bg-white">
       <div
@@ -16,7 +23,6 @@ export default function NccShowcase() {
           isOpen ? "lg:grid-cols-[1fr_320px]" : "lg:grid-cols-1"
         }`}
       >
-
         <div className="space-y-16 min-w-0">
           <ProductRange />
           <DetailsMatter />
@@ -24,7 +30,7 @@ export default function NccShowcase() {
         </div>
 
         {isOpen && (
-          <div className="lg:sticky lg:top-24 h-fit">
+          <div ref={formRef} className="lg:sticky lg:top-24 h-fit">
             <QuoteForm />
           </div>
         )}
