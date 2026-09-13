@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #14213d;
+}
+
+.container-x {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.btn-gold {
+  @apply inline-flex items-center gap-2 rounded-md bg-gold-500 px-5 py-3 font-semibold text-navy-900 shadow-sm transition hover:bg-gold-400;
+}
+
+.btn-outline {
+  @apply inline-flex items-center gap-2 rounded-md border border-navy-800 px-5 py-3 font-semibold text-navy-800 transition hover:bg-navy-50;
+}
+
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(15, 31, 66, 0.08), 0 8px 24px rgba(15, 31, 66, 0.06);
+}
+
+.form-input {
+  @apply w-full rounded-md border border-navy-100 bg-white px-3 py-2 text-sm text-navy-800 outline-none transition focus:border-navy-600 focus:ring-1 focus:ring-navy-600;
+}
+
+.checkmark::before {
+  content: "\2713";
+  color: #1e8a4c;
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
