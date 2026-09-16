@@ -2,26 +2,30 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import customisationImg from "../public/images/NCC Website/KHaki CLoseup.png";
+import customisationImg from "../public/images/image.png";
 
 const customisations = [
   {
     label: "Institution\nName",
-    icon: (
-      <path d="M6 3h9v18H6V3zM9 7h3M9 10h3M9 13h3M9 16h3M4 21h13" />
-    ),
+    icon: <path d="M6 3h9v18H6V3zM9 7h3M9 10h3M9 13h3M9 16h3M4 21h13" />,
   },
   {
     label: "Cadet\nName",
-    icon: <path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" />,
+    icon: (
+      <path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" />
+    ),
   },
   {
     label: "Logo\nEmbroidery",
-    icon: <path d="M12 3l2 5 5 .7-3.6 3.5.8 5-4.2-2.4-4.2 2.4.8-5L5 8.7 10 8l2-5z" />,
+    icon: (
+      <path d="M12 3l2 5 5 .7-3.6 3.5.8 5-4.2-2.4-4.2 2.4.8-5L5 8.7 10 8l2-5z" />
+    ),
   },
   {
     label: "Badge\nPlacement",
-    icon: <path d="M12 2l2.6 1.5L18 3l.5 3.4L21 9l-1.5 2.6L21 15l-3 .5L18 19l-3.4.5L12 22l-2.6-2.5L6 19l-.5-3.5L2 15l1.5-2.4L2 9l3.5-.6L6 3l3.4.5L12 2z" />,
+    icon: (
+      <path d="M12 2l2.6 1.5L18 3l.5 3.4L21 9l-1.5 2.6L21 15l-3 .5L18 19l-3.4.5L12 22l-2.6-2.5L6 19l-.5-3.5L2 15l1.5-2.4L2 9l3.5-.6L6 3l3.4.5L12 2z" />
+    ),
   },
   {
     label: "Custom\nRequirements",
@@ -32,7 +36,7 @@ const customisations = [
 const faqs = [
   {
     q: "What is your minimum order quantity?",
-    a: "We work with schools, colleges and institutions of all sizes — share your cadet strength and we'll confirm what works best for a bulk order.",
+    a: "Our minimum order quantity is 30 pieces. For bulk orders, share your cadet strength and we'll help you with the best options.",
   },
   {
     q: "Can we order a size sample set before the bulk order?",
@@ -58,18 +62,28 @@ export default function CustomisationFaq() {
   return (
     <section id="customisation" className="container-x py-16">
       <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr_1.15fr] lg:items-start">
-        
         <div>
           <h2 className="text-2xl font-extrabold text-navy-600">
             Customisation & institutional support
           </h2>
-          <p className="mt-2 text-navy-700">Have a specific requirement? We can help.</p>
+          <p className="mt-2 text-navy-700">
+            Have a specific requirement? We can help.
+          </p>
 
           <div className="mt-6 grid grid-cols-3 sm:grid-cols-5 gap-3">
             {customisations.map((c) => (
-              <div key={c.label} className="flex flex-col items-center text-center gap-2">
+              <div
+                key={c.label}
+                className="flex flex-col items-center text-center gap-2"
+              >
                 <span className="grid h-14 w-14 shrink-0 place-items-center rounded-lg bg-navy-50 text-navy-600">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    className="h-6 w-6"
+                  >
                     {c.icon}
                   </svg>
                 </span>
@@ -81,7 +95,6 @@ export default function CustomisationFaq() {
           </div>
         </div>
 
-        
         <div className="relative h-64 lg:h-80 rounded-xl overflow-hidden">
           <Image
             src={customisationImg}
@@ -96,9 +109,10 @@ export default function CustomisationFaq() {
           </div>
         </div>
 
-        
         <div>
-          <h2 className="text-2xl font-extrabold text-navy-600">NCC Uniforms — FAQs</h2>
+          <h2 className="text-2xl font-extrabold text-navy-600">
+            NCC Uniforms — FAQs
+          </h2>
           <div className="mt-4 space-y-2">
             {faqs.map((f, i) => (
               <div

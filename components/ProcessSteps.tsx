@@ -75,9 +75,14 @@ export default function ProcessSteps() {
             {steps.map((s, i) => (
               <div key={s.n} className="flex items-start">
                 <div className="w-[130px] sm:w-[150px]">
-                  
                   <div className="grid h-16 w-16 place-items-center rounded-full bg-navy-50 text-navy-600">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-7 w-7">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      className="h-7 w-7"
+                    >
                       {s.icon}
                     </svg>
                   </div>
@@ -87,8 +92,12 @@ export default function ProcessSteps() {
                       {s.n}
                     </span>
                     <div>
-                      <h3 className="font-bold text-navy-600 text-sm leading-snug">{s.title}</h3>
-                      <p className="mt-1 text-xs text-navy-600 leading-snug">{s.desc}</p>
+                      <h3 className="font-bold text-navy-600 text-sm leading-snug">
+                        {s.title}
+                      </h3>
+                      <p className="mt-1 text-xs text-navy-600 leading-snug">
+                        {s.desc}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -102,7 +111,6 @@ export default function ProcessSteps() {
             ))}
           </div>
 
-          
           <div
             className="relative rotate-[-2deg] bg-gold-400 p-6 shadow-md h-fit"
             style={{
@@ -112,10 +120,17 @@ export default function ProcessSteps() {
           >
             <div className="flex items-start justify-between gap-2">
               <h3 className="text-lg font-extrabold uppercase text-navy-600 leading-tight">
-                Size panga?
-                <br />Sorted.
+                Size problem?
+                <br />
+                Sorted.
               </h3>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-8 w-8 text-navy-900 shrink-0">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                className="h-8 w-8 text-navy-900 shrink-0"
+              >
                 <path d="M8 4l4 2 4-2 3 3-2 2v11H7V9L5 7l3-3z" />
               </svg>
             </div>

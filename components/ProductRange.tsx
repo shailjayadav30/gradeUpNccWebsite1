@@ -101,7 +101,7 @@ export default function ProductRange() {
         ›
       </button> */}
 
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
         {products.map((p) => (
           <div key={p.name} className="rounded-xl bg-white/60 overflow-hidden">
             <div className="relative aspect-[4/3]">
