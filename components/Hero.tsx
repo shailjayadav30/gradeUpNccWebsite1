@@ -3,66 +3,26 @@ import Image from "next/image";
 import whatsapp from "../public/images/whatsapp.png";
 import nccCadet from "../public/images/NCC Website/Group of ncc cadets.png";
 import { useQuoteForm } from "./QuoteFormCOntext";
+import { PackageCheck, Users, Ruler, Building2 } from "lucide-react";
 
 const features = [
   {
     label: "Complete\nNCC Kit",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" />
-        <path d="M4 7.5L12 12l8-4.5M12 12v9" />
-      </svg>
-    ),
+    icon: PackageCheck,
   },
   {
     label: "Bulk\nOrders",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <circle cx="8" cy="8" r="3" />
-        <circle cx="16" cy="8" r="3" />
-        <path d="M2 20c0-3 2.5-5 6-5s6 2 6 5M10 20c0-3 2.5-5 6-5s6 2 6 5" />
-      </svg>
-    ),
+    icon: Users,
   },
   {
     label: "Multiple\nSizes",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <rect x="3" y="9" width="18" height="6" rx="1" />
-        <path d="M6 9v6M9 9v3M12 9v6M15 9v3M18 9v6" />
-      </svg>
-    ),
+    icon: Ruler,
   },
   {
     label: "Institutional\nSupply",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path d="M4 21h16M5 21V9l7-5 7 5v12M9 21v-6h6v6" />
-      </svg>
-    ),
+    icon: Building2,
   },
 ];
-
 export default function Hero() {
   const { open } = useQuoteForm();
   return (
@@ -112,19 +72,24 @@ export default function Hero() {
           </p>
 
           <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-4 max-w-md">
-            {features.map((f) => (
-              <div
-                key={f.label}
-                className="flex items-center gap-3 text-sm font-semibold"
-              >
-                <span className="grid h-9 w-9 shrink-0 place-items-center text-navy-700">
-                  <span className="h-6 w-6">{f.icon}</span>
-                </span>
-                <span className="whitespace-pre-line leading-tight text-navy-800">
-                  {f.label}
-                </span>
-              </div>
-            ))}
+            {features.map((f) => {
+              const Icon = f.icon;
+
+              return (
+                <div
+                  key={f.label}
+                  className="flex items-center gap-3 text-sm font-semibold"
+                >
+                  <span className="grid h-9 w-9 shrink-0 place-items-center text-navy-700">
+                    <Icon size={24} strokeWidth={1.8} />
+                  </span>
+
+                  <span className="whitespace-pre-line leading-tight text-navy-800">
+                    {f.label}
+                  </span>
+                </div>
+              );
+            })}
           </div>
 
           <div className="mt-8 flex flex-wrap gap-4">
